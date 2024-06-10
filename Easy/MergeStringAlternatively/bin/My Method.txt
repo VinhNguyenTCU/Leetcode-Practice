@@ -1,0 +1,9 @@
+First I create StringBuilder to store my answer
+Initialize left and right equals 0, at the beginning of two words
+
+Check if both left and right smaller than the size of two words
+then merge the character at position left to the character at the position right, then increase both 
+left and right by 1
+
+For the edge case, check whether word1 will end first or word2 will end first. 
+Then loop through the string builder to get the StringBuilder

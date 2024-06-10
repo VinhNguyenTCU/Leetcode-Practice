@@ -1,0 +1,13 @@
+First, check the edge case, if the String is null, immediately throw true to the terminal. End the method.
+Let left = 0 and right= String.length() - 1;
+Create two methods: isAlphabeticalorDigit() and toLower();
+
+isAlphabeticalorDigit check whether the character is alphabetical or not
+return (ch >= 'a' && ch <= 'z') || (ch >= '0' && ch <= '9') 
+
+toLower method to lowercase the given String
+if (ch >= 'A' && ch <= 'Z')
+{ 
+    return (char) (ch + 32);
+}
+return ch;

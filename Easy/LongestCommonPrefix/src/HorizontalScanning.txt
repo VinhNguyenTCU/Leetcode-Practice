@@ -1,0 +1,7 @@
+Edge Case: if the length of the String is 0/ empty/ null --> return "";
+
+Let the first element of the array is the prefix
+Then make a for loop, start from position 1 and create a while to compare with 
+each element. If the prefix is not at the beginning of the element, which means the result of the 
+method indexOf is not equal 0, then the element on the right side of the prefix will be removed until it is in
+the beginning of the element.

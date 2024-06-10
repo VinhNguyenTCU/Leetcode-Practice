@@ -1,0 +1,16 @@
+1. Initializes HashMap name map. Where the key are sorted String (representing the sorted characters of each string in the input array) 
+and the value are List of String (representing the anagrams of a specific group)
+
+2. Create a for-each loop to iterate through each String in the given String array
+
+3. Each string then will be converted into char Array with the method toCharArray()
+
+4. Then use method Array.sort(). This step ensures that all anagrams of the same word will have the same sorted representation, which will
+serve as the key in the map.
+
+5. Then use the String.valueOf() to convert the char array back to the String.
+
+6. Check whether the map contains the key or not. If the map contains key, then it will get the key, and add the new value to that key. If
+the map does not contain that key, it will put a new key and a new ArrayList as value.
+
+7. Return a new ArrayList<>(map.values());

@@ -1,0 +1,8 @@
+First, compare the two length of each word
+Then, get the size of the smaller length
+
+Run a for loop until it reach the smaller length,
+every loop, append the character at i position to the StringBuilder
+
+When the loop finishes, append the remain character of a bigger length to the 
+StringBuilder

@@ -1,0 +1,13 @@
+Use String builder to make a list of 16 
+Change the given string to lower case and then change it into a character array
+Then use for each loop to go through every element of the array, check whether it is digit or letter
+If it's true then add the letter or digit to the StringBuilder
+If it's false, then skip and and continue the for-each loop
+
+Then create another while loop with left and right pointer
+As long as the left pointer is smaller than the right pointer, compare the char at the two pointer
+If two char are the same, then keep looping by increasing left by one and decreasing right by one
+If the two char are different, then immediately throw false to the terminal
+
+If the while loop continues to the end without meeting any false result, then return true for the whole loop.
+
