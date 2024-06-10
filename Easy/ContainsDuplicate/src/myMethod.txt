@@ -1,0 +1,23 @@
+1: I initialize a Hashmap named map to store elements from the array nums as key, 
+with their corresponding counts as value.
+
+2: The loop iterates through array nums
+
+3: For each element nums[i], the code check if it's already in the map.
+- If it is not in the map, put that new value in the map and initialize with 1
+- If if is already in the map, return false
+
+
+Time Complexity:
+- Initialization: Creating the "Hashmap" is O(1)
+- Loop: The loop runs "n" times, where "n" is the length of the array nums
+- HashMap operations: Both "containsKey" and "put" operations on a "HashMap" have an 
+average time complexity of O(1)
+
+Therefore, the overall time complexity is: O(n)
+
+
+Space Complexity:
+- HashMap Storage: In the worst case, if there are no duplicates, the HashMap will store n key-value pairs
+
+Thus the space complexity: O(n)
