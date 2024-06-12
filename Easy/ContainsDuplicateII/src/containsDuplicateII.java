@@ -1,5 +1,6 @@
 import java.util.HashMap;
 
+// myMethod
 public class containsDuplicateII {
     public static boolean containsNearbyDuplicate(int[] nums, int k) {
         if (nums.length == 1) return false;

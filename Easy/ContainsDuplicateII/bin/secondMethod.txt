@@ -1,0 +1,22 @@
+1: Create/ Initialize a Hashmap named map to store pair key-value and track indices of elements
+
+2: Iterate through the array, check for any duplicates and if the difference between the current index and 
+and stored index map.get(nums[i]) is less than or equal to k.
+
+3: Otherwise, update the index of the new key-value pair into the map.
+
+4: Return false if no nearby duplicate is found.
+
+Time Complexity: 
+- Iteration: the method iterates through the array nums once, resulting in time complexity of O(n) where n is the number 
+of elements of nums
+
+- Each operation on the HashMap (containsKey, get, put) is O(1) on average due to the underlying hash table
+implementation.
+
+--> Therefore, the overall time complexity is O(n).
+
+Space Complexity:
+- The HashMap stores at most n elements in the worst case, where n is the length of the array
+
+--> Therefore, the overall space complexity is O(n).
