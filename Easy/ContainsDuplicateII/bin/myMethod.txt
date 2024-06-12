@@ -1,0 +1,24 @@
+1: Check edge case, check for the single element array, if it's a single element array then return false
+
+2: Check edge case, check for two elements array, initialize int i = 0 and int j = 1 to check the first
+and second element. If the two numbers are duplicated, then check if j - i <= k. 
+If j - i <= k then return true, otherwise return false.
+
+3: Create a hashmap to store the elements of the array and their most indices.
+
+4: Iterate through the array, if the element is not in the Hashmap, add that number as a key and indice as a value.
+Otherwise, if map contains that number: 
+    - If the difference between the indice of the current duplicated number and the stored number less than or equal to k,
+    then return true.
+    - Otherwise, update the stored index with the current index.
+
+5: Return false if no nearby duplicate is false
+
+Time Complexity:
+- The method iterate through the array once, resulting in a time complexity of O(n), where n is the length of array numbers
+- Each operation on the HashMap (contains, put, get) is O(1) on average, so the overall complexity remains O(n).
+
+Space Complexity:
+- The space complexity is O(min(n, k)), where n is the number of elements in the array and k is the maximum distance for checking duplicates.
+In the worst case, the HashMap might store all n elements if k is very large.
+If k is smaller than n, the HashMap will store at most k + 1 elements, as any index beyond k will overwrite older indices.
