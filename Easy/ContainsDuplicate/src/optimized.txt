@@ -5,4 +5,4 @@
 3: If the array contains only two elements -> Check if those two elements are equal
 If they are equal, return true else return false
 
-4: 
+4: Use the insertion sort and then iterate through the arrays 
