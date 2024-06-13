@@ -1,4 +1,3 @@
-import java.util.HashMap;
 
 public class optimized {
     public static boolean containsDuplicate(int[] nums){
