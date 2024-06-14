@@ -1,0 +1,3 @@
+Heap has time complexity of O(Nlogk). To ensure that O(Nlogk) is always less than O(NlogN), the particular case k = N could be 
+considered separately and solved in O(N) time.
+

@@ -1,0 +1,5 @@
+This problem can actually be solved in linear time called bucket sort.
+
+Min-Heap:
+- Complete Binary Tree
+- The value of each nodee is less than or equal to the value of its children

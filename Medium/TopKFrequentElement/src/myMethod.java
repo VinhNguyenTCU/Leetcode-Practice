@@ -1,29 +1,42 @@
 import java.util.HashMap;
+import java.util.PriorityQueue;
+import java.util.Queue;
 
 public class myMethod {
-    public static int[] topKFrequent(int[] nums, int k) {
+    public static void topKFrequent(int[] nums, int k) {
+        // if (k == nums.length) return nums;
+
         HashMap<Integer, Integer> map = new HashMap<>();
-        int[] ans = new int[nums.length];
-        int j = 0;
+
         for (int i = 0; i < nums.length; i++){
-            if (!map.containsKey(nums[i])){
-                map.put(nums[i], 1);
-            }else if (map.containsKey(nums[i]) && map.get(nums[i]) >= k){
-                ans[j] = nums[i];
-                j++;
-            }else if(map.containsKey(nums[i]) && map.get(nums[i]) < k){
-                map.put(nums[i],map.get(nums[i]) + 1);
-            }
+            map.put(nums[i], map.getOrDefault(nums[i], 0) + 1);
         }
-        return ans;
+
+        Queue<Integer> heap = new PriorityQueue<>(
+            (n1, n2) -> map.get(n1) - map.get(n2)
+        );
+
+        for (int value : map.keySet()){
+            heap.add(value);
+            if (heap.size() > k) heap.poll();
+        }
+
+        int[] ans = new int[k];
+        for (int i = k - 1; i >= 0; i--){
+            ans[i] = heap.poll();
+        }
+
+
+        System.out.println(map.toString());
+        System.out.println(map.keySet().toString());
+        for (int num : ans){
+            System.out.print(" " + num);
+        }
     }
 
     public static void main(String[] args) {
-        int[] nums = {1,1,1,2,2,3};
+        int[] nums = {1,2,1,1,2,3};
         int k = 2;
-        int[] ans = topKFrequent(nums, k);
-        for (int val : ans){
-            System.out.print(" " + val);
-        }
+        topKFrequent(nums, k);
     }
 }
