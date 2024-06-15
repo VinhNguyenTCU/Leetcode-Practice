@@ -3,8 +3,8 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class myMethod {
-    public static void topKFrequent(int[] nums, int k) {
-        // if (k == nums.length) return nums;
+    public static int[] topKFrequent(int[] nums, int k) {
+        if (k == nums.length) return nums;
 
         HashMap<Integer, Integer> map = new HashMap<>();
 
@@ -27,16 +27,15 @@ public class myMethod {
         }
 
 
-        System.out.println(map.toString());
-        System.out.println(map.keySet().toString());
-        for (int num : ans){
-            System.out.print(" " + num);
-        }
+        return ans;
     }
 
     public static void main(String[] args) {
         int[] nums = {1,2,1,1,2,3};
         int k = 2;
-        topKFrequent(nums, k);
+        int[] ans = topKFrequent(nums, k);
+        for (int val : ans){
+            System.out.println(val + " ");
+        }
     }
 }
