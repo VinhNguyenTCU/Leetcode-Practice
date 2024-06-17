@@ -1,28 +1,32 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class myMethod {
+public class opitmizedMethod{
     public static String encode(List<String> strs){
         StringBuilder builder = new StringBuilder();
         for (String str : strs){
-            builder.append(str);
-            builder.append("%");
+            builder.append(str.length()).append("#").append(str);
         }
+        // input : [Hello, World]
+        // output: 5#Hello5#World
         return builder.toString();
     }
 
     public static List<String> decode(String s){
-        String[] decodeStrings = s.split("%", -1);
-        
         List<String> arrayList = new ArrayList<>();
-        for (int i = 0; i < decodeStrings.length - 1; i++){
-            arrayList.add(decodeStrings[i]);
+        int i = 0;
+        int n = s.length();
+        while (i < n){
+            int j = i;
+            while (s.charAt(j) != '#'){ // 5#Hello5#World
+                j++;
+            }
+
+            int length = Integer.parseInt(s.substring(i, j));
+            arrayList.add(s.substring(j + 1, j + 1 + length));
+            i = j + 1 + length;
         }
-        // Arrays.asList(decodeStrings);
-        // arrayList.subList(0, decodeStrings.length - 1);
-
         return arrayList;
-
     }
 
     public static void main(String[] args) {

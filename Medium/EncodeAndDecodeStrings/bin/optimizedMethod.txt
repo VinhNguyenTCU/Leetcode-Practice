@@ -1,0 +1,56 @@
+---- Encode method ----
+
+Take a List of String object and return a String 
+
+1: Initialize a Stringbuilder for efficient string concatenation and to store the result string
+
+2: Iterate over each String element and append 
+ - The length of that String element
+ - The "#" character as a delimiter
+ - The string element 
+
+3: Converts the Stringbuilder to a String and return the result string 
+
+Time Complexity: 
+- The loop takes O(n) time where n is the total length of the given input list of String 
+- The append opeartions inside the for loop take O(1) time
+
+--> Overall time complexity, O(n) where n is the total length of input list.
+
+Space Complexity:
+- Initialize take O(n) space where n is the total length of the concatenated String.
+
+---- Decode method ----
+
+Declares a method named decode that takes an input String and return the list of String objects
+
+1: Initialize an empty ArrayList
+
+2: Initailize an index i to zero
+
+3: Set n equals to the given input String length
+
+4: Iterate through the given input string as long as the i index is less than n 
+
+5: Initailize an index j to i 
+
+6: As long as the character at index j is equal to "#" the inside loop will stop and continue to execute the outerloop
+Otherwise, the j index will keep accelerating.
+
+7: The outerloop - get the number right before the character "#", which is the length of the nearby word 
+
+8: Add the next string to the arrayList by extracting from the position right after the character "#" to the position after the length of the word
+
+9: Then update the index of i to where the previous word added 
+
+10: Return the result arrayList
+
+Time Complexity:
+- The while loop iterates over each character in the input string exactly once, making the time complexity O(n), where n is the length of the input string.
+- The inner loop takes O(m) where m is some position of the character "#"
+
+--> Overall time complexity is O(n)
+
+Space Complexity:
+- The space complexity is O(m), where m is the number of strings in the input list.
+
