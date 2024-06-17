@@ -1,0 +1,43 @@
+----- Encode method -------
+1: public static String encode(List<String> strs): declares a static method named "encode" that takes a 
+'List' of 'String' objects and returns a 'String'.
+
+2: Initialize a Stringbuilder to store the result string 
+
+3: Iterate through the given arrayList str and append each element of given array list to
+the stringbuilder and append a "%" character as a delimiter. Return the result string 
+
+Time Complexity:
+- Loop through the given list of string: O(n) where n is the length of given input list
+- The append operations takes O(1)
+
+--> Overall Time Complexity: O(n)
+
+Space Complexity:
+- The space complexity is O(n), where n is the total length of given input list. The stringbuilder holds all the character of 
+concatenated string.
+
+----------------------------
+
+----- Decode method ------
+
+1: public static List<String> decode(String s) declares a static method named decode that takes a String and return a list of string
+
+2: Splits the input string by "%" into an array, including trailing empty strings if present.
+
+3: Initialize an empty arrayList.
+
+4: Iterate through the decoded Strings and add every element of the decoded string array, except the last element (which is an empty string)
+
+5: Return the result array list
+
+Time complexity:
+- Splitting the string and turn to the array of String takes O(n) time where n is the total length of the given input string
+
+- Iterate through the splitted String array takes O(m) time where m is the number of elements of the splitted array. In this case, m is less than n because 
+the empty string " " and "%" are removed from the given input array.
+
+--> The overall time complexity is O(n) where n is the length of input string
+
+Space complexity:
+- The space complexity is O(m) because we create a new array list to store the splitted string array, which is proportional to the number of delimiters and the length of the input string. 
