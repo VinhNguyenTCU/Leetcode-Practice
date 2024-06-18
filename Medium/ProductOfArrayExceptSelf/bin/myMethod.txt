@@ -1,0 +1,2 @@
+In this method, I used the division operation, which is not allowed as the task said. In this case,
+in some edge case, the denominator (nums[i]) will be zero so it will throw exception warnings.

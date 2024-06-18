@@ -1,0 +1,26 @@
+1: Initalize a static method named productExceptSelf, it will receive the input integer array and also return an integer array.
+
+2: Initalize an product array has the length equal to the given input array.
+
+3: Initialize integer n equals to the length of the input array to improve the time complexity.
+
+4: Iterate through the input array and assign each element in the product array equals to 1.
+
+5: Initalize total equals to 1. Iterate over each elements in nums by using inner for loop, Skip the current element at the current index i,
+by using continue statement. Multiply the total by each element of nums[j] except nums[j == i].
+
+6: Assign the the calculated total to product array at i index. 
+
+7: Return the product array.
+
+---- Time Complexity ----
+
+- The first for loop used to assign 1 to every element of product array takes O(n) time.
+
+- The outer loop and the inner loop used to calculate the total by multiplied by every element nums[j] and update total takes O(n) time.
+
+--> Overall time complexity is O(n^2).
+
+---- Space Complexity ----
+
+- Initalize a product array to store the answer takes O(n) space, where n is the total length of given input array. 
