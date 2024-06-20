@@ -1,0 +1,15 @@
+1: In this optimized method, we uses the combination of two-poiner technique and binary search 
+strategy to find two numbers in a sorted array that add up to a given target.
+
+2: Initialize an ans array which will store the result indices if they are found. Otherwise, return itself and indices -1 -1 means not found.
+Initialize variable length which is the total length the input array.
+
+left is an index starting at the beginning of the array (index 0).
+right is an index starting at the end of the array (index length - 1).
+
+--- Time Complexity ---
+The time complexity of this algorithm is O(n) in the worst case. The two-pointer approach ensures each element is processed at most once.
+The additional checks with the middle index do not add more than constant time operations to each iteration.
+
+--- Space Complexity --- 
+The space complexity of this algorithm is O(1) because it uses a constant amount of extra space (variables left, right, middle, sum, and the output array ans).

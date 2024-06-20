@@ -1,0 +1,24 @@
+1: Create a static method named twoSum, receive an integer array named numbers and integer target. Then return an integer array.
+
+2: Initialize length which equals to the length of the given array.
+Initialize left is a starting index at the beginning of the input array and right is the starting index at the end of the input array.
+
+3: Iterate through the given input array using while loop, as long as the left index less than the right index. 
+
+4: If the sum of the element of the left index and the element at the right index is greater than targer, then the right index will decrease/ decremented. This is because
+the given input array is sorted, so if we want to decrease the sum, we need to move the right pointer to left.
+
+5: If the sum of the element of the left index and the element of the right index is less than the target number, then the left index will increase/ increment. This is because 
+the given input array is sorted, so if we want to increase the sum, we need to move the left pointer to the right.
+
+6: If the sum of element at left index and element of right index equals to the target number, return the new array with the indices of these two elements. The indices are incrementd by 1 
+because the problem assumed 1-based indexing.
+
+7: If cannot find two elements that add up to the target, then return null. 
+
+--- Time Complexity ---
+- While loop takes O(n) where n is the length of the array, in the worst case where the second last element and last element add up to the target.
+"This is because in the worst case, each element is processed at most once as the left and right pointers move towards each other."
+
+--- Space Complexity ---
+- Because we only iterate on the given input array, we don't need to create any extra space. So the overall space complexity of this method is O(1).
