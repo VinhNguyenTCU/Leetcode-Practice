@@ -1,0 +1,15 @@
+-- Brute Force Method --
+
+- Initalize ans = 0
+
+- Iterate the array from left to right
+    + Initialize left_max = 0 and right_max = 0;
+    + Iterate from the current element to the beginning of array updating:
+        -> left_max = max(left_max, height[j])
+
+    + Iterate from the current element to the ned of array updating:
+        -> right_max = max(right_max, height[j])
+
+    + Then ans += Min.(left_max, right_max) - height[j]
+
+--> Return ans
