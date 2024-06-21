@@ -13,3 +13,10 @@
     + Then ans += Min.(left_max, right_max) - height[j]
 
 --> Return ans
+
+-- Time complexity --
+- The inner and outer for loop executes will takes O(n^2) time complexity.
+For each element of array, we iterate the left and right parts. 
+
+-- Space complexity --
+- We use constant space so it will take O(1) extra space complexity.
