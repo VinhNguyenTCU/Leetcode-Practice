@@ -1,5 +1,8 @@
 import java.util.HashSet;
 
+/*
+ * Approach 1: Create a Hash set for each row, column, and box
+ */
 public class validSudoku {
     public static boolean isValidSudoku(char[][] board) {
         int n = board.length;
@@ -13,10 +16,38 @@ public class validSudoku {
             column[i] = new HashSet<Character>();
         }
 
+        for (int r = 0; r < n; r++){
+            for (int c = 0; c < n; c++){
+                char value = board[r][c];
+                
+                if (value == '.'){
+                    continue;
+                }
+
+                if (row[r].contains(value)){
+                    return false;
+                }else{
+                    row[r].add(value);
+                }
+
+                if (column[c].contains(value)){
+                    return false;
+                }else{
+                    column[c].add(value);
+                }
+
+                if (box[r/3 * 3 + c/3].contains(value)){
+                    return false;
+                }else{
+                    box[r/3 * 3 + c/3].contains(value);
+                }
+            }
+        }
+        return true;
     }
 
     public static void main(String[] args) {
-        char[][] board = {{'8','3','.','.','7','.','.','.','.'},
+        char[][] board = {{'5','3','.','.','7','.','.','.','.'},
          {'6','.','.','1','9','5','.','.','.'}
         ,{'.','9','8','.','.','.','.','6','.'}
         ,{'8','.','.','.','6','.','.','.','3'}
