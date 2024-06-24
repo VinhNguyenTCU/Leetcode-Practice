@@ -1,0 +1,37 @@
+1: create a static method named isValidSudoku, take 2-D array board as paramater and return boolean result.
+
+2: Initialize integer n equals to the length of each row of a board, which is 9 and equals to the length of the row.
+
+3: Initialize a list containing 9 hash set, where the hash set at index r will be used to store previously seen numbers in row r of the sudoku.
+Likewise, initialize lists of 9 hash sets to track the columns and boxes too.
+
+4: Iterate over each position (r,c) in the sudoku. At each iteration, if there is a number at the current position"
+
+-> For the row: Check if the number already exist at the Hash set row[r][c], if it has already appeared, then return false.
+Otherwise, put that value to the hash set row.
+
+-> For the column: Check if the number already exist at the Hash set column[r][c], if it has already appeared, then return false.
+Otherwise, put that value to the hash set column.
+
+--> For the box: We can decide each box by using floor divisions, and the result will become the name of the box.
+
+for example, the first three rows are 0 1 2, and when we divide by 3, we will get 0 0 0.
+             the first three columns are 0 1 2, and when we divide by 3, we will get 0 0 0.
+--> Therefore, the first box is 0.
+
+We will do the same on the second box where rows are 3 4 5 and when we divide by 3, we will get 1 1 1.
+And columns are 3 4 5, then divide by 3 will result in 1 1 1.
+--> Therefore, the second box to the right is 1. 
+
+5: If the value at current position is '.', then the inner for loop continues.
+
+If no duplicates were found after every position on the sudoku board has been visited, then the sudoku is valid, so return false.
+
+-- Time Complexity --
+- Iterate through each row and each column takes O(n^2) time complexity, where n is the length of each row and column.
+- Each of the four check step is an O(1) operation.
+
+--> Overall time complexity is O(n^2).
+
+-- Space Complexity --
+- Because in the worst-case scenario, if the board is full, we need a hash set each with size N to store all seen numbers for each of the N rows, N columns, and N boxes, respectively.
