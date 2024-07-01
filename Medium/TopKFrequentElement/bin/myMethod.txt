@@ -1,0 +1,45 @@
+Heap has time complexity of O(Nlogk). To ensure that O(Nlogk) is always less than O(NlogN), the particular case k = N could be 
+considered separately and solved in O(N) time.
+
+1: I handle the edge case where the number of elements k to be returned is equal to the input of the array length. 
+
+2: Create a hashmap to store pair key-value (number - frequency) of each element.
+
+3: Iterate through the arrays and put a new element into the hashmap; otherwise, get the element and add 1 to the frequency to update it.
+
+4: A PriorityQueue "min-heap" is initialized with a custom comparator that sorts elements based on their frequency in ascending order.
+
+5: Then iterate through the keyset of the hashmap and add every key to the min-heap. If the heap size exceeds k, the smallest element which 
+has the lowest frequency is removed.
+
+6: Initialize a new int array to store the answer, with the length of k number of elements. The loop is iterated backward to extract the element from
+the heap and store to the array.
+
+7: Return the result array.
+
+Time Complexity: 
+1. Frequency counting: O(n)
+- Each element in nums is processed once, where n is the length of nums
+
+2. Heap operation: O(mlogk)
+- There are m unique elements (where m is the number of unique keys in the map). Each insertion and deletion in the heap takes O(logK) time. 
+- In the worst case, this step involves m operations, leading to O(mlogk).
+
+3. Extracting topK element: O(klogk)
+- Extracting elements from the heap K times, each operations takes O(logk) time.
+
+Overall time complexity: O(n + mlogk + klogk). Since m <= n, it simplifies to 
+O(nlogK)
+
+Space Complexity: 
+1. HashMap: O(m)
+- The map store the frequency of each unique element where m is the length of the input array
+
+2. Heap: O(k)
+- The heap stores upto K elements because it will remove the lowest frequency whenever the heap size is greater than K
+
+3. Output array: O(k)
+- The array ans stores k elements
+
+Overall Space Complexity: O(m + n), where m <= n so the worst case is 
+O(n)

@@ -39,7 +39,7 @@ public class validSudoku {
                 if (box[r/3 * 3 + c/3].contains(value)){
                     return false;
                 }else{
-                    box[r/3 * 3 + c/3].contains(value);
+                    box[r/3 * 3 + c/3].add(value);
                 }
             }
         }
