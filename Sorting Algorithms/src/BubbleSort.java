@@ -14,7 +14,7 @@ public class BubbleSort {
         boolean swapped;
         do {
             swapped = false;
-            for (int i = 0; i < n - 2; i++){
+            for (int i = 0; i < n - 1; i++){
                 if (nums[i] > nums[i + 1]){
                     temp = nums[i];
                     nums[i] = nums[i + 1];
@@ -26,7 +26,7 @@ public class BubbleSort {
     }
 
     public static void main(String[] args) {
-        int[] nums = {64, 34, 25, 12, 22, 11, 90};
+        int[] nums = {9,1,-3,2,4,8,3,-1,6,-2,-4,7};
         System.out.print("Unsorted array: ");
         for (int num : nums){
             System.out.print(" " + num);
