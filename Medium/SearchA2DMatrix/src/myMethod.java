@@ -11,9 +11,15 @@ public class myMethod {
                 ans = true;
             }
         }
-
         return ans;
 
+        /*
+         * If the target value exist in the row at i index, then the final answer will equals true. Otherwise, after
+         * checking all the 2D arrays and cannot find the target number, then return false.
+         * 
+         * Time Complexity: O(log (m * n)) since it a standard binary search.
+         * Space Complexity: O(1) 
+         */
     }
 
     public static boolean binarySearch(int[] nums, int target){
