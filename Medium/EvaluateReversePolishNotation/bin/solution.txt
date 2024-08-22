@@ -1,0 +1,20 @@
+1: A stack is created to hold integers (operand) or operators.
+
+2: A for-each loop to loop through each token of the given String array called tokens, if 
+the token is not an operator, then it is an integer(operand) and then push it to the stack and keep
+looping through the given String arrays.
+
+3: Then when we meet an operator, pop out the first 2 elements of the stack. 
+
+4: Initialize an integer result variable to store the result afterwards.
+
+5: Depending on the operator, the code performs the corresponding operation. Then the result is pushed back
+to the stack.
+
+6: After processing all tokens, the final result of the Reverse Polish Notation is on the top of the stack. 
+
+-- Time complexity: O(n) because the for-each loop iterates through the given String array, where n is the number of element of the 
+given input array.
+
+-- Space complexity: O(n). In the worst case, the stack could hold all the operands before any operations are performed. Thus, the space complexity is O(n) 
+where n is the number of tokens.
