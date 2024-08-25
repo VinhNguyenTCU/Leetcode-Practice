@@ -1,0 +1,13 @@
+isValid function 
+- initalize a left_count to check whether the string is a valid parenthesis or not
+- for each loop iterate through the given input String (then turn this given String to char Array)
+- we increment left_count by 1 if char c equals '(' and decrement by 1 if c equals ')'
+
+So if the left_count < 0 means the parenthesis at the beginning is ')' which is wrong, it shoud start 
+with '('.
+
+Return true if left_count == 0.
+
+generateParenthesis
+- Initialize a queue that contains an empty string, create an empty array answer to store the final result.
+- 

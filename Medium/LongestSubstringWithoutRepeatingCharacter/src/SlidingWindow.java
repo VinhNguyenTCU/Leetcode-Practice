@@ -1,5 +1,5 @@
-import java.util.HashSet;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 
 public class SlidingWindow {
     public static int lengthOfLongestSubstring(String s) {
@@ -7,18 +7,18 @@ public class SlidingWindow {
         int left = 0;
         int right = 0;
 
+        Map<Character, Integer> map = new HashMap<>();
+
         while (right < s.length()){
-            Set<Character> set = new HashSet<>();
-            if (!set.contains(s.charAt(right))) set.add(s.charAt(right));
-            if (set.contains(s.charAt(right))) {
-                while (left < right){
-                    char l = s.charAt(left);
-                    set.remove(l);
-                    left++;
-                }
+            if (!map.containsKey(s.charAt(right))){
+                map.put(s.charAt(right), 0);
+            }else{
+                map.put(s.charAt(right), map.get(s.charAt(right)) + 1);
             }
-            longest_substring = Math.max(longest_substring, set.size());
-            right++;
+
+            while (map.get(s.charAt(right)) > 1){
+                
+            }
         }
         return longest_substring;
     }

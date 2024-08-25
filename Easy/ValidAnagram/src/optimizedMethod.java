@@ -28,6 +28,9 @@ public class optimizedMethod {
 		char[] str1 = new char[26];
 		char[] str2 = new char[26];
 
+        // For each character, it increments the corresponding index in the frequency arrays. 
+        // The index is calculated by subtracting the ASCII value of 'a' from the ASCII value of the character, 
+        // which gives the position of the character in the alphabet.
         for (int i = 0; i < s1.length(); i++){
             str1[s1.charAt(i) - 'a'] += 1; /* We add 1 to the postion of the character in alphabetical order:
             b = 1 - a = 0  --> the element at index 1 in str1 array will turn from 0 to 1*/
@@ -42,16 +45,14 @@ public class optimizedMethod {
         // If all corresponding elements are equal, the function returns true; otherwise, it returns false. */
 
         /*
-         * Overall time complexity: O(nlogn)
+         * Overall time complexity: O(n)
          * 1. Edge case check - O(1)
          * 2. Covert to lowercase - O(n) --> convert each string takes linear time where n is the total length of the given string
-         * 3. Convert character to arrays - O(n) 
-         * 4. Sort the character arrays - O(nlogn)
-         * 5. While loop - O(n)
+         * 3. Populating the frequency arrays takes linear time, as it requires iterating through each character in the strings.
+         * 4. Comparing the two fixed-size arrays (each of length 26) is a constant-time operation.
          * 
-         * Overall space complexity: O(n)
-         * 1. Case conversion - O(1)
-         * 2. Char arrays conversion - O(n)
+         * Overall space complexity: O(1)
+         * Although we do use extra space, the space complexity is O(1) because the table's size stays constant no matter how large n is.
          */
 	}
 
