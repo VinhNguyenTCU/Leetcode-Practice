@@ -10,13 +10,16 @@ public class SlidingWindow {
         Map<Character, Integer> map = new HashMap<>();
 
         while (right < s.length()){
-            if (!map.containsKey(s.charAt(right))){
-                map.put(s.charAt(right), 0);
+            char c = s.charAt(right);
+
+            if (!map.containsKey(c)){
+                map.put(c, 0);
             }else{
-                map.put(s.charAt(right), map.get(s.charAt(right)) + 1);
+                map.put(c, map.get(c) + 1);
             }
 
-            while (map.get(s.charAt(right)) > 1){
+            while (map.get(c) > 1){
+                char l = s.charAt(left);
                 
             }
         }
