@@ -1,0 +1,6 @@
+What are the different types of binary trees?
+- Full Tree: Tree where every node have two children nodes except the leaves
+- Complete Tree: Every node has at lease two children except for the bottom level, and they have to be filled in as far left as possible
+- Degenerate tree: Every node only has one child node
+- Perfect tree: every internal node has two children and all leaves are on the same level
+- Balanced tree: height of the left and right subtree of any node differ by not more than one
